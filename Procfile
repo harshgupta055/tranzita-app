@@ -1,0 +1,1 @@
+web: gunicorn tranzita.wsgi
