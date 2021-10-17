@@ -16,7 +16,7 @@ def index(request):
 def urlGenerator():
     li = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9']
     new_url_endpoint = random.choice(li) + random.choice(li) + random.choice(li) + random.choice(li) + random.choice(li) + random.choice(li)
-    new_url = f"http://127.0.0.1:8000/{new_url_endpoint}/"
+    new_url = f"http://127.0.0.1:8000/{new_url_endpoint}"
     if URL.objects.filter(generated_url=new_url).exists():
         urlGenerator()
     else:
